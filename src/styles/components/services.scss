@@ -1,0 +1,40 @@
+.services {
+	&__title {
+		letter-spacing: 0.1rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__lead {
+		margin: 0 auto 2rem;
+		max-width: 800px;
+		text-align: center;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 auto;
+		max-width: 900px;
+
+		.service-card {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 33%;
+
+			&__name {
+				text-align: center;
+				font-weight: $light;
+				letter-spacing: 0.1rem;
+				text-transform: uppercase;
+			}
+			&:nth-child(n + 4) {
+				.h4 {
+					color: $primary-color;
+					font-weight: $regular;
+				}
+			}
+		}
+	}
+}

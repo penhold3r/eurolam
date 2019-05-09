@@ -1,0 +1,47 @@
+/* -------------------------
+*
+* Color Scheme
+*
+*/
+
+$primary-color: #e32213;
+$secondary-color: #e32213;
+$accent-color: #e32213;
+
+$light-grey: #e2d7cf;
+$grey: #7f7771;
+$dark-grey: #33302d;
+$dark: #2b2826;
+
+$black: $dark;
+$white: $light-grey;
+
+/* -------------------------
+*
+* Fonts
+*
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,600,900');
+//@import './font';
+
+$main-font: 'Raleway', sans-serif;
+$title-font: 'Raleway', sans-serif;
+$display-font: 'Raleway', sans-serif;
+
+$light: 300;
+$regular: 600;
+$bold: 900;
+
+/* -------------------------
+*
+* Breakpoints
+*
+*/
+
+$max-width: 1400px;
+
+$full: $max-width;
+$narrow: 1100px;
+$tablet: 780px;
+$phone: 560px;

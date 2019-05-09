@@ -1,0 +1,51 @@
+.site-header {
+	background: rgba($dark, 0.8);
+	padding: 1rem;
+	position: sticky;
+	top: 0;
+	z-index: 99;
+
+	&__inner {
+		display: flex;
+		height: 4rem;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: $max-width;
+
+		.main-logo {
+			height: 100%;
+			width: 250px;
+
+			&__link {
+				display: block;
+				height: 100%;
+				text-decoration: none;
+
+				img {
+					height: 100%;
+					object-fit: contain;
+					width: 100%;
+				}
+			}
+		}
+
+		.main-nav {
+			display: flex;
+			align-items: center;
+
+			&__link {
+				border-bottom: 3px double transparent;
+				font-size: 0.8rem;
+				letter-spacing: 0.05rem;
+				text-decoration: none;
+				text-transform: uppercase;
+				transition: all 0.3s;
+
+				&:hover {
+					border-bottom: 3px double $primary-color;
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,78 @@
+.beams {
+	position: relative;
+
+	&__hero {
+		position: relative;
+
+		.beams-bg {
+			display: block;
+			height: 100%;
+			left: 0;
+			object-fit: cover;
+			opacity: 0.3;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 0;
+		}
+
+		.beams-content {
+			display: flex;
+			padding-right: 1rem;
+			position: relative;
+			z-index: 1;
+
+			&__image {
+				margin: 0 2.5% 0 10%;
+				width: 25%;
+
+				img {
+					display: block;
+					height: 100%;
+					object-fit: cover;
+					width: 100%;
+				}
+			}
+
+			&__text {
+				width: 75%;
+				max-width: 600px;
+
+				h3 {
+					text-transform: uppercase;
+				}
+
+				p {
+					column-count: 2;
+				}
+			}
+		}
+	}
+
+	&__specs {
+		.beams-grid {
+			display: flex;
+			justify-content: center;
+			margin: 0 auto;
+			max-width: $max-width;
+
+			.beams-card {
+				list-style: none;
+				width: 20%;
+
+				&__icon {
+					border-radius: 50%;
+					height: 100px;
+					margin: 0.5rem auto;
+					width: 100px;
+				}
+
+				&__title {
+					font-size: 1.5rem;
+					text-align: center;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}

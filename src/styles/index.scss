@@ -1,0 +1,10 @@
+@import './includes/*.scss';
+
+body {
+	color: $dark-grey;
+	font-family: $main-font;
+	font-weight: $regular;
+	scroll-behavior: smooth;
+}
+
+@import './components/*.scss';

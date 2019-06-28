@@ -16,6 +16,9 @@
 		"serve": "gatsby serve"
 	},
 	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^1.2.19",
+		"@fortawesome/free-brands-svg-icons": "^5.9.0",
+		"@fortawesome/react-fontawesome": "^0.1.4",
 		"gatsby": "^2.3.16",
 		"gatsby-image": "^2.0.37",
 		"gatsby-plugin-manifest": "^2.0.28",

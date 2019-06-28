@@ -1,11 +1,8 @@
 import React from 'react'
 
-import aboutLogo from '../images/eurolam_logo.svg'
-
 const About = () => {
 	return (
 		<section className="about py-3">
-			<img className="about__image" src={aboutLogo} alt="Eurolam" />
 			<div className="about__content px-1">
 				<p className="text-color-primary">
 					<strong>Eurolam</strong> es una marca desarrollada por la empresa Valerio Oliva

@@ -1,14 +1,10 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 
 import Header from './Header'
 import Footer from './Footer'
@@ -17,6 +13,8 @@ import 'sanitize.css'
 import '../styles/index.scss'
 
 import favicon from '../images/favicon.ico'
+
+library.add(fab)
 
 const Layout = ({ title, children }) => (
 	<StaticQuery
@@ -56,6 +54,11 @@ const Layout = ({ title, children }) => (
 								href: favicon,
 								rel: 'shortcut icon',
 								type: 'image/x-icon'
+							}
+						]}
+						script={[
+							{
+								src: 'https://kit.fontawesome.com/54610dc2a8.jsx'
 							}
 						]}
 					/>

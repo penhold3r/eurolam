@@ -1,5 +1,5 @@
 .about {
-	background: #fff;
+	position: relative;
 
 	&__image {
 		display: block;
@@ -21,33 +21,93 @@
 		}
 	}
 
-	&__cards {
-		.cards-grid {
-			display: grid;
-			grid-gap: 1rem;
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-			margin: 0 auto;
-			max-width: 800px;
+	.caracteristics {
+		background: rgba($white, 0.5);
 
-			.about-card {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
+		&__title {
+			font-size: 2rem;
+			font-weight: $regular;
+			letter-spacing: 0.1rem;
+			margin: 0 0 1rem;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		&__subtitle {
+			font-weight: $light;
+			letter-spacing: 0.1rem;
+			margin: 0 0 1rem;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		&__text {
+			font-weight: $regular;
+			letter-spacing: 0.1rem;
+			margin: 0 0 1rem;
+			line-height: 1.5;
+			margin: 0 auto 2rem;
+			max-width: 800px;
+			text-align: center;
+			text-transform: uppercase;
+
+			&.feat {
+				border: 1px solid #fff;
+				text-transform: none;
+			}
+		}
+	}
+
+	.cards {
+		&__grid {
+			display: flex;
+			justify-content: center;
+			margin: 0 auto;
+			max-width: $max-width;
+
+			.beams-card {
+				list-style: none;
+				width: 20%;
 
 				&__icon {
-					border: 1px solid $primary-color;
-					height: 50px;
-					margin: auto;
-					width: 50px;
+					border-radius: 50%;
+					border: 1px solid $light-grey;
+					cursor: pointer;
+					display: flex;
+					height: 100px;
+					margin: 0.5rem auto;
+					transition: all 0.3s;
+					width: 100px;
+
+					img {
+						display: block;
+						margin: auto;
+						transition: all 0.3s;
+						width: 50%;
+					}
+
+					&:hover {
+						border: 1px solid $primary-color;
+
+						img {
+							width: 60%;
+						}
+					}
 				}
 
-				&__name {
+				&__title {
+					font-size: 1.5rem;
 					text-align: center;
-					font-weight: $regular;
-					letter-spacing: 0.1rem;
 					text-transform: uppercase;
 				}
 			}
+		}
+
+		&__footnote {
+			margin: 0 auto 2rem;
+			max-width: 800px;
+			text-align: center;
+			line-height: 1.5;
 		}
 	}
 }

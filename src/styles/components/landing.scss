@@ -1,10 +1,9 @@
 .landing {
-	position: relative;
 	display: flex;
 	height: 100vh;
 	justify-content: flex-end;
-	margin: -65px 0 0;
 	min-height: 600px;
+	position: relative;
 
 	&__slider {
 		height: 100%;
@@ -13,12 +12,12 @@
 		z-index: 0;
 
 		.slide {
-			position: absolute;
 			height: inherit;
-			width: inherit;
 			opacity: 0;
-			transition: all 1.5s;
 			overflow: hidden;
+			position: absolute;
+			transition: all 1.5s;
+			width: inherit;
 
 			&.active {
 				opacity: 1;
@@ -28,16 +27,16 @@
 			}
 
 			&__image {
-				position: absolute;
 				height: inherit;
-				width: inherit;
+				position: absolute;
 				transform: scale(1.2);
 				transition: all 1s ease-in-out;
+				width: inherit;
 
 				img {
 					display: block;
-					object-fit: cover;
 					height: inherit;
+					object-fit: cover;
 					width: inherit;
 				}
 			}
@@ -56,30 +55,48 @@
 		z-index: 1;
 
 		.landing-text {
-			font-size: 2rem;
+			font-size: 3.5rem;
 			font-weight: $light;
 			line-height: 1;
 			text-transform: uppercase;
 			letter-spacing: 0.2rem;
-			text-align: center;
+			max-width: $max-width;
+			margin: auto auto 0;
+			width: 100%;
 
-			strong {
-				font-weight: $bold;
+			.smaller {
+				font-weight: $regular;
+				font-size: 2rem;
+			}
+		}
+		.slogan {
+			font-weight: 1.5rem;
+			letter-spacing: 0.2rem;
+			line-height: 1;
+			margin: 0 auto auto;
+			max-width: $max-width;
+			text-transform: uppercase;
+			width: 100%;
+
+			span {
+				border-left: 6px solid $primary-color;
+				padding: 0.5rem 1rem;
 			}
 		}
 	}
 
 	.scrolly {
-		position: absolute;
-		bottom: 1rem;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
+		border-radius: 15px;
 		border: 3px solid $white;
+		bottom: 1rem;
+		cursor: pointer;
 		display: flex;
 		height: 45px;
+		left: 0;
+		margin: 0 auto;
+		position: absolute;
+		right: 0;
 		width: 30px;
-		border-radius: 15px;
 		z-index: 2;
 
 		@include tablet {
@@ -88,11 +105,11 @@
 
 		.wheely {
 			animation: scroll 1.5s ease-in-out infinite;
-			height: 12px;
-			width: 4px;
 			background: $white;
 			border-radius: 2px;
+			height: 12px;
 			margin: 8px auto auto;
+			width: 4px;
 		}
 	}
 }

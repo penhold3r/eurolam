@@ -1,35 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-//import hero from '../images/eurolam-hero_landing.jpg'
-
 const context = require.context('../images/slider', true, /eurolam_slider-(\d+)\.jp(e?)g/)
 const images = context.keys().map(key => context(key))
-const slides = [
-	{
-		title: '1 Lorem ipsum dolor',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic commodi fugit dolores consequuntur? Dicta, nam!',
-		image: images[0]
-	},
-	{
-		title: '2 Lorem ipsum dolor',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic commodi fugit dolores consequuntur? Dicta, nam!',
-		image: images[1]
-	},
-	{
-		title: '3 Lorem ipsum dolor',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic commodi fugit dolores consequuntur? Dicta, nam!',
-		image: images[2]
-	},
-	{
-		title: '4 Lorem ipsum dolor',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic commodi fugit dolores consequuntur? Dicta, nam!',
-		image: images[3]
-	}
-]
 
 const Landing = () => {
 	const [currSlide, setCurrSlide] = useState(1)
@@ -61,12 +33,12 @@ const Landing = () => {
 			dirIndex = dirIndex < directions.length - 1 ? dirIndex + 1 : 0
 			setTransition(directions[dirIndex])
 		}, interval)
-	}, [])
+	}, [interval])
 
 	//console.log(transition)
 
 	return (
-		<section className="landing">
+		<section className="landing" id="inicio">
 			<div className={'landing__slider'}>
 				{images.map((slide, key) => {
 					const active = currSlide === key + 1
@@ -95,12 +67,15 @@ const Landing = () => {
 
 			<div className="landing__content">
 				<h2 className="landing-text text-color-light-grey m-none p-2">
-					<span>Tecnología &amp;</span>
+					<span>Excelencia</span>
 					<br />
-					<span>
-						<strong>Trayectoria</strong>
-					</span>
+					<span>&amp; Trayectoria</span>
+					<br />
+					<span className="smaller text-color-primary">en Vigas Laminadas</span>
 				</h2>
+				<p className="slogan text-color-light-grey px-2">
+					<span>mas de 60 años acompañando crecimiento e innovacion.</span>
+				</p>
 			</div>
 
 			<div className="scrolly" onClick={scroll}>

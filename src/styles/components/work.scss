@@ -1,0 +1,15 @@
+.work {
+	&__title {
+		font-size: 2rem;
+		font-weight: $regular;
+		letter-spacing: 0.1rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__lead {
+		margin: 0 auto 2rem;
+		max-width: 800px;
+		text-align: center;
+	}
+}

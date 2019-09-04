@@ -4,7 +4,14 @@ body {
 	color: $dark-grey;
 	font-family: $main-font;
 	font-weight: $regular;
+	line-height: 1.2;
 	scroll-behavior: smooth;
+
+	main {
+		overflow-x: hidden;
+		position: relative;
+		top: -65px;
+	}
 }
 
 @import './components/*.scss';

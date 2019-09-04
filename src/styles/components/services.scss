@@ -12,28 +12,38 @@
 	}
 
 	&__list {
-		display: flex;
-		flex-wrap: wrap;
+		align-items: start;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 1rem;
 		margin: 0 auto;
 		max-width: 900px;
+
+		@include tablet {
+			grid-template-columns: 1fr;
+			max-width: 500px;
+		}
 
 		.service-card {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			width: 33%;
 
-			&__name {
-				text-align: center;
+			&__name,
+			&__tagname {
+				font-size: 1.25rem;
 				font-weight: $light;
 				letter-spacing: 0.1rem;
+				text-align: center;
 				text-transform: uppercase;
 			}
-			&:nth-child(n + 4) {
-				.h4 {
-					color: $primary-color;
-					font-weight: $regular;
-				}
+
+			&__tagname {
+				font-weight: $regular;
+			}
+
+			&__text {
+				text-align: center;
 			}
 		}
 	}

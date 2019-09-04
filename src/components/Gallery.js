@@ -1,25 +1,63 @@
-import React from 'react'
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import Img from 'gatsby-image'
 
-import gallery from '../data/gallery-images'
+const Gallery = ({ data }) => {
+	const [modalState, setModalState] = useState({
+		modalOpen: false,
+		currentImage: ''
+	})
 
-const Gallery = () => {
-	return (
-		<section className="gallery p-2">
-			<h2 className="gallery__title text-color-grey">Nuestras Obras</h2>
-			<p className="gallery__lead lead">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a aliquet orci. Ut
-				interdum mauris sem, non aliquet felis interdum sit amet.
-			</p>
-			<div className="gallery__list">
-				{gallery.map((image, key) => (
-					<div className="image-card" key={key}>
-						<div className="image-card__image" />
-						<h3 className="image-card__name m-none p-h-1">{image.name}</h3>
-					</div>
-				))}
+	const imgs = data.map(({ node: { id, name, publicURL, childImageSharp } }) => {
+		const thumb = childImageSharp.fluid
+
+		return (
+			<div key={id} className="gallery-item">
+				<div
+					className="gallery-item__image"
+					onClick={() => {
+						const open = {
+							currentImage: publicURL,
+							modalOpen: true
+						}
+						setModalState(open)
+					}}
+				>
+					<Img className="g-image" fluid={thumb} alt={name} />
+				</div>
+				<h3 className="gallery-item__title bg-color-dark-grey text-color-white m-none p-h-1">
+					{name}
+				</h3>
 			</div>
-		</section>
+		)
+	})
+
+	return (
+		<div className="gallery">
+			<div className={modalState.modalOpen ? 'modal-image open' : 'modal-image'}>
+				<div className="inner-modal">
+					<div
+						className="close-modal"
+						onClick={() => {
+							const close = {
+								currentImage: '',
+								modalOpen: false
+							}
+							setModalState(close)
+						}}
+					>
+						&times;
+					</div>
+					<img src={modalState.currentImage} alt="" />
+				</div>
+			</div>
+			{imgs}
+		</div>
 	)
+}
+
+Gallery.propTypes = {
+	data: PropTypes.array
 }
 
 export default Gallery

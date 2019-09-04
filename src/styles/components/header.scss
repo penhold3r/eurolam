@@ -1,9 +1,19 @@
 .site-header {
 	background: linear-gradient(rgba($dark, 0.8), rgba($dark, 0));
+	height: 65px;
 	position: sticky;
 	top: 0;
-	height: 65px;
+	transition: all 0.3s;
 	z-index: 99;
+
+	&.darken {
+		background: rgba($dark, 0.8);
+
+		.main-logo {
+			height: 100%;
+			width: 100px;
+		}
+	}
 
 	&__inner {
 		display: flex;
@@ -13,6 +23,7 @@
 
 		.main-logo {
 			height: 100%;
+			transition: all 0.3s;
 			width: 150px;
 
 			&__link {
@@ -37,9 +48,9 @@
 			justify-content: space-between;
 			margin-top: 1rem;
 			padding: 0.5rem;
-			width: 40px;
-			transition: all 0.5s;
 			position: relative;
+			transition: all 0.5s;
+			width: 40px;
 			z-index: 2;
 
 			&__bar {
@@ -79,19 +90,19 @@
 			z-index: 1;
 
 			.main-nav {
-				animation: slideBack 0.4s ease-in-out forwards;
 				align-items: center;
+				animation: slideBack 0.4s ease-in-out forwards;
 				display: flex;
 				flex-direction: column;
 				margin: 50% auto auto;
-				width: 150px;
+				opacity: 0;
+				transition: all 0.4s;
+				width: 175px;
 
 				&__link {
-					animation: collapse 0.4s ease-in-out forwards;
 					border-bottom: 3px double transparent;
 					font-size: 1.25rem;
 					letter-spacing: 0.07rem;
-					padding: 0;
 					position: relative;
 					text-align: center;
 					text-decoration: none;
@@ -189,12 +200,13 @@
 				right: 0;
 
 				.main-nav {
-					transform: translateY(-2.25rem);
+					opacity: 1;
+					transform: translateX(2.25rem);
 					animation: slide 0.4s ease-in-out 0.4s forwards;
 
 					&__link {
-						opacity: 0;
-						animation: expand 0.4s ease-in-out 0.4s forwards;
+						opacity: 1;
+						//animation: expand 0.4s ease-in-out 0.4s forwards;
 					}
 				}
 
@@ -207,45 +219,21 @@
 	}
 }
 
-@keyframes expand {
-	from {
-		padding: 0;
-		opacity: 0;
-	}
-
-	to {
-		padding: 0.5rem;
-		opacity: 1;
-	}
-}
-
-@keyframes collapse {
-	from {
-		padding: 0.5rem;
-		opacity: 1;
-	}
-
-	to {
-		padding: 0rem;
-		opacity: 0;
-	}
-}
-
 @keyframes slide {
 	from {
-		transform: translateY(-2.5rem);
+		transform: translateX(2.5rem);
 	}
 
 	to {
-		transform: translateY(-0.25rem);
+		transform: translateX(0.25rem);
 	}
 }
 @keyframes slideBack {
 	from {
-		transform: translateY(-0.25rem);
+		transform: translateX(0.25rem);
 	}
 
 	to {
-		transform: translateY(-2.5rem);
+		transform: translateX(2.5rem);
 	}
 }

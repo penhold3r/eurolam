@@ -4,16 +4,14 @@ import Layout from '../components/Layout'
 import Landing from '../components/Landing'
 import About from '../components/About'
 import Services from '../components/Services'
-import Gallery from '../components/Gallery'
-import Beams from '../components/Beams'
+import Work from '../components/Work'
 
 const IndexPage = () => (
 	<Layout>
 		<Landing />
 		<About />
-		<Gallery />
+		<Work />
 		<Services />
-		<Beams />
 	</Layout>
 )
 

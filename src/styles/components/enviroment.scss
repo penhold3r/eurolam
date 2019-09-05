@@ -1,12 +1,12 @@
-.beams {
-	position: relative;
+.enviroment {
+	background-repeat: no-repeat;
+	background-size: cover;
 	display: flex;
 	flex-wrap: wrap;
+	position: relative;
 
 	&__title,
 	&__text {
-		background-repeat: no-repeat;
-		background-size: cover;
 		display: flex;
 		flex-direction: column;
 		width: 50%;
@@ -17,15 +17,16 @@
 	}
 
 	&__title {
-		background-color: $grey;
-		background-blend-mode: multiply;
+		background: rgba(#000, 0.5);
 		font-size: 2.25rem;
 		font-weight: $light;
 		letter-spacing: 0.1rem;
 		text-transform: uppercase;
+		order: 2;
 
 		@include tablet {
 			font-size: 2rem;
+			order: 1;
 		}
 
 		span {
@@ -40,8 +41,12 @@
 	}
 
 	&__text {
-		background-color: $grey;
-		background-blend-mode: multiply;
+		background: rgba(#fff, 0.5);
+		order: 1;
+
+		@include tablet {
+			order: 2;
+		}
 
 		h3 {
 			font-weight: $regular;

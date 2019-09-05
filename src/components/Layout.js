@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faHome, faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 
 import Header from './Header'
 import Footer from './Footer'
@@ -14,7 +15,7 @@ import '../styles/index.scss'
 
 import favicon from '../images/favicon.ico'
 
-library.add(fab)
+library.add(fab, faHome, faEnvelope, faPhoneAlt)
 
 const Layout = ({ title, children }) => (
 	<StaticQuery

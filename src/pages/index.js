@@ -5,6 +5,9 @@ import Landing from '../components/Landing'
 import About from '../components/About'
 import Services from '../components/Services'
 import Work from '../components/Work'
+import Beams from '../components/Beams'
+import Enviroment from '../components/Enviroment'
+import Contact from '../components/Contact'
 
 const IndexPage = () => (
 	<Layout>
@@ -12,6 +15,9 @@ const IndexPage = () => (
 		<About />
 		<Work />
 		<Services />
+		<Beams />
+		<Enviroment />
+		<Contact />
 	</Layout>
 )
 

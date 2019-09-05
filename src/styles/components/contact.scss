@@ -1,0 +1,133 @@
+.contact {
+	background-blend-mode: multiply;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	height: 100vh;
+	min-height: 500px;
+	position: relative;
+
+	&__content {
+		margin: auto;
+		max-width: 900px;
+		width: 100%;
+
+		.contact-title {
+			font-size: 2.5rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1rem;
+			font-weight: $regular;
+			text-align: center;
+		}
+
+		.contact-form {
+			margin: 0 auto 1rem;
+			max-width: 400px;
+			position: relative;
+			width: 100%;
+
+			.form-block {
+				margin: 0 0 1rem;
+				width: 100%;
+				position: relative;
+				transition: all 0.3s;
+
+				.form-input {
+					display: block;
+					border: none;
+					height: 40px;
+					font-family: $main-font;
+					background: none;
+					width: 100%;
+					transition: all 0.3s;
+
+					&.textarea {
+						resize: unset;
+					}
+
+					@include placeholder {
+						color: $light-grey;
+						text-transform: uppercase;
+						transition: all 0.3s;
+					}
+				}
+
+				&:after {
+					border: 1px solid $primary-color;
+					bottom: 0;
+					content: '';
+					height: 3px;
+					left: 0;
+					position: absolute;
+					transition: all 0.3s;
+					width: 100%;
+				}
+
+				&.expanded {
+					.form-input {
+						padding: 0.5rem 1rem;
+
+						@include placeholder {
+							opacity: 0;
+						}
+					}
+
+					.textarea {
+						height: 6rem;
+					}
+
+					&:after {
+						height: 100%;
+					}
+				}
+			}
+
+			.form-submit {
+				border: none;
+				cursor: pointer;
+				text-transform: uppercase;
+				text-align: center;
+				transition: all 0.3s;
+				width: 100%;
+
+				&:hover {
+					background: $grey;
+					color: $primary-color;
+				}
+			}
+		}
+
+		.contact-info {
+			display: flex;
+			justify-content: center;
+			list-style: none;
+
+			&__item {
+				display: flex;
+				justify-content: center;
+				width: 30%;
+
+				.fa {
+					font-size: 1.25rem;
+					margin: 0 1rem 0 0;
+				}
+
+				p {
+					letter-spacing: 0.1rem;
+					font-weight: $light;
+					text-transform: uppercase;
+				}
+
+				a {
+					height: fit-content;
+					font-weight: $light;
+					text-decoration: none;
+
+					&:hover {
+						opacity: 0.7;
+					}
+				}
+			}
+		}
+	}
+}

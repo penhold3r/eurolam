@@ -1,10 +1,8 @@
 import React from 'react'
 
-import services from '../data/services-list'
-
 const Services = () => {
 	return (
-		<section className="services p-2" id="servicios">
+		<section className="services p-4" id="servicios">
 			<h2 className="services__title">Servicios</h2>
 
 			<ul className="services__list p-none m-none">

@@ -92,6 +92,7 @@
 		}
 
 		&__title {
+			display: none;
 			font-weight: $light;
 			mix-blend-mode: hard-light;
 			font-size: 1rem;

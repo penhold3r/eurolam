@@ -1,8 +1,18 @@
 .services {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	height: 100vh;
+
+	@include tablet {
+		height: auto;
+	}
+
 	&__title {
 		letter-spacing: 0.1rem;
 		font-size: 2.5rem;
 		font-weight: $regular;
+		margin: auto auto 2rem;
 		text-align: center;
 		text-transform: uppercase;
 	}
@@ -18,7 +28,7 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 1rem;
-		margin: 0 auto;
+		margin: 0 auto auto;
 		max-width: 900px;
 
 		@include tablet {
@@ -30,6 +40,16 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+
+			.grey {
+				border: 1px solid $light-grey;
+				transition: all 0.3s;
+				cursor: pointer;
+
+				&:hover {
+					border: 1px solid $primary-color;
+				}
+			}
 
 			&__name,
 			&__tagname {
@@ -45,7 +65,50 @@
 			}
 
 			&__text {
-				text-align: center;
+				bottom: 0;
+				display: flex;
+				left: 0;
+				margin: auto;
+				pointer-events: none;
+				position: absolute;
+				right: 0;
+				top: 0;
+				transition: all 0.5s;
+
+				.inner-card {
+					background: $white;
+					box-shadow: $box-shadow;
+					height: fit-content;
+					margin: auto;
+					max-width: 450px;
+					opacity: 0;
+					padding: 3rem 2rem 2rem;
+					position: relative;
+					transition: all 0.5s;
+					transform: translateY(20px);
+					width: 90%;
+
+					.close-card {
+						cursor: pointer;
+						font-size: 2rem;
+						padding: 0 1rem;
+						position: absolute;
+						right: 0;
+						top: 0;
+					}
+				}
+
+				&.active {
+					background: rgba(#fff, 0.8);
+					opacity: 1;
+					pointer-events: all;
+					z-index: 9;
+
+					.inner-card {
+						opacity: 1;
+						transform: translateY(0px);
+					}
+				}
 			}
 		}
 	}

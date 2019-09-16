@@ -1,7 +1,8 @@
 import React from 'react'
 import { Parallax } from 'react-parallax'
 
-import bg from '../images/eurolam_about-bg.jpg'
+import bgAbout from '../images/eurolam-about_bg.jpg'
+import bgSpecs from '../images/eurolam-caracteristicas_bg.jpg'
 
 import caracteristicas from '../images/caracteristicas.svg'
 import cortes from '../images/cortes.svg'
@@ -10,18 +11,24 @@ import estructuras from '../images/estructuras.svg'
 const About = () => {
 	return (
 		<section className="about" id="nosotros">
-			<Parallax bgImage={bg} strength={300} style={{ padding: '3rem 0 0' }}>
-				<div className="about__content px-1 py-5">
-					<p className="text-color-primary">
-						<strong>Eurolam</strong> es una marca desarrollada por la empresa Valerio Oliva
-						S.A.C.I.A. en Argentina para la comercialización de vigas laminadas.
+			<div
+				className="about__content bg-color-dark-grey px-1 py-5"
+				style={{ backgroundImage: `url(${bgAbout})` }}
+			>
+				<div className="text-block py-3">
+					<p className="text-color-white">
+						<strong>Eurolam</strong> es una marca desarrollada por la empresa{' '}
+						<strong>Valerio Oliva S.A.C.I.A.</strong> en Argentina para la comercialización de
+						vigas laminadas.
 					</p>
-					<p>
+					<p className="text-color-primary enfasis my-2">
 						Hoy abrimos nuestro <strong>espacio comercial en Chile</strong> con proyección
 						exportadora a todo el mundo.
 					</p>
 				</div>
-				<div className="caracteristics px-1 py-3">
+			</div>
+			<Parallax bgImage={bgSpecs} strength={400}>
+				<div className="caracteristics px-1 py-4">
 					<h3 className="caracteristics__title">Caracteristicas</h3>
 					<h4 className="caracteristics__subtitle text-color-primary">
 						Diseño, Ingeniería y Fabricación

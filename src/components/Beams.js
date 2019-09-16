@@ -1,7 +1,6 @@
 import React from 'react'
 
 import specsBg from '../images/eurolam-vigas_bg.jpg'
-import beamsBg from '../images/eurolam-vigas_caracteristicas.jpg'
 
 const Beams = () => {
 	return (
@@ -14,9 +13,9 @@ const Beams = () => {
 					Ventajas de la <strong>Madera Laminada</strong>
 				</span>
 			</h2>
-			<div className="beams__text p-3" style={{ backgroundImage: `url(${beamsBg})` }}>
+			<div className="beams__text">
 				<h3 className="text-color-primary m-none">Vigas Laminadas</h3>
-				<ul className="m-none text-color-white">
+				<ul className="m-none">
 					<li>
 						Excepcional resistencia al fuego. Bajo la acción del fuego se produce una
 						carbonización en la superficie de la madera que actúa como aislante, impidiendo la

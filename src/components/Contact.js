@@ -58,19 +58,19 @@ const Contact = () => {
 					/>
 				</form>
 				<ul className="contact-info p-none my-2">
-					<li className="contact-info__item p-1">
+					<li className="contact-info__item p-2">
 						<FontAwesomeIcon className="fa text-color-primary" icon={['fas', 'home']} />
 						<p className="text-color-white m-none">
 							C. Rodríguez Peña 2250, M5501 Godoy Cruz, Mendoza, Argentina.
 						</p>
 					</li>
-					<li className="contact-info__item p-1">
+					<li className="contact-info__item p-2">
 						<FontAwesomeIcon className="fa text-color-primary" icon={['fas', 'envelope']} />
 						<Link to="mailto:info@eurolam.cl" className="text-color-white">
 							info@eurolam.cl
 						</Link>
 					</li>
-					<li className="contact-info__item p-1">
+					<li className="contact-info__item p-2">
 						<FontAwesomeIcon className="fa text-color-primary" icon={['fas', 'phone-alt']} />
 						<Link to="mailto:+5492615086518" className="text-color-white">
 							54 9 261 508 6518

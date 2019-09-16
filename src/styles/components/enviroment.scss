@@ -2,6 +2,10 @@
 	position: relative;
 	top: -2rem;
 
+	@include tablet {
+		top: 0;
+	}
+
 	&__header,
 	&__content {
 		display: flex;
@@ -9,6 +13,8 @@
 	}
 
 	&__header {
+		position: relative;
+
 		.env-title {
 			display: flex;
 			font-size: 2.25rem;
@@ -16,6 +22,14 @@
 			letter-spacing: 0.1rem;
 			text-transform: uppercase;
 			width: calc(50% - 3rem);
+
+			@include tablet {
+				color: $light-grey !important;
+				font-size: 2rem;
+				position: relative;
+				width: 100%;
+				z-index: 2;
+			}
 
 			span {
 				display: block;
@@ -29,6 +43,13 @@
 
 		.env-hero {
 			width: calc(50% + 3rem);
+
+			@include tablet {
+				position: absolute;
+				height: 100%;
+				z-index: 1;
+				width: 100%;
+			}
 
 			img {
 				display: block;
@@ -44,8 +65,18 @@
 		position: relative;
 		top: -2rem;
 
+		@include tablet {
+			top: 0;
+		}
+
 		.env-img {
 			width: calc(50% + 3rem);
+
+			@include tablet {
+				width: 100%;
+				position: absolute;
+				z-index: 1;
+			}
 
 			img {
 				display: block;
@@ -53,6 +84,10 @@
 				object-fit: cover;
 				opacity: 0.8;
 				width: 100%;
+
+				@include tablet {
+					opacity: 0.5;
+				}
 			}
 		}
 
@@ -62,7 +97,10 @@
 			width: calc(50% - 3rem);
 
 			@include tablet {
+				padding: 2rem 0;
 				width: 100%;
+				position: relative;
+				z-index: 2;
 			}
 
 			h3 {
@@ -72,6 +110,10 @@
 				margin: auto auto 1rem;
 				max-width: 400px;
 				width: 100%;
+
+				@include tablet {
+					color: $light-grey;
+				}
 			}
 
 			ul {
@@ -81,6 +123,10 @@
 				list-style: none;
 				position: relative;
 				width: 100%;
+
+				@include tablet {
+					color: $light-grey;
+				}
 
 				&:before {
 					background: $primary-color;
@@ -92,50 +138,6 @@
 					left: 0;
 				}
 			}
-		}
-	}
-
-	&__title,
-	&__text {
-		display: flex;
-		flex-direction: column;
-		width: 50%;
-
-		@include tablet {
-			width: 100%;
-		}
-	}
-
-	&__title {
-		background: rgba(#000, 0.5);
-		font-size: 2.25rem;
-		font-weight: $light;
-		letter-spacing: 0.1rem;
-		text-transform: uppercase;
-		order: 2;
-
-		@include tablet {
-			font-size: 2rem;
-			order: 1;
-		}
-
-		span {
-			margin: auto;
-			max-width: 400px;
-			width: 100%;
-
-			strong {
-				font-weight: $regular;
-			}
-		}
-	}
-
-	&__text {
-		background: rgba(#fff, 0.5);
-		order: 1;
-
-		@include tablet {
-			order: 2;
 		}
 	}
 }

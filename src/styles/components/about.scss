@@ -18,6 +18,10 @@
 		height: 100vh;
 		display: flex;
 
+		@include tablet {
+			height: auto;
+		}
+
 		.text-block {
 			margin: auto;
 
@@ -62,6 +66,10 @@
 		background: rgba($white, 0.5);
 		height: 100vh;
 
+		@include tablet {
+			height: auto;
+		}
+
 		&__title {
 			font-size: 2.5rem;
 			font-weight: $regular;
@@ -69,6 +77,10 @@
 			margin: 2rem 0 1rem;
 			text-align: center;
 			text-transform: uppercase;
+
+			@include tablet {
+				font-size: 2rem;
+			}
 		}
 
 		&__subtitle {
@@ -99,6 +111,7 @@
 	.cards {
 		&__grid {
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: center;
 			margin: 0 auto;
 			max-width: $max-width;
@@ -106,6 +119,10 @@
 			.beams-card {
 				list-style: none;
 				width: 30%;
+
+				@include tablet {
+					width: 100%;
+				}
 
 				&__icon {
 					border-radius: 50%;

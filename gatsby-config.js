@@ -31,7 +31,7 @@ module.exports = {
 				short_name: `Eurolam`,
 				start_url: `/`,
 				background_color: `#7f7771`,
-				theme_color: `#e32213`,
+				theme_color: `#e81c1f`,
 				display: `standalone`,
 				icon: `src/images/favicon.png` // This path is relative to the root of the site.
 			}

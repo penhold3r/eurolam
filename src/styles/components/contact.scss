@@ -7,6 +7,10 @@
 	min-height: 500px;
 	position: relative;
 
+	@include tablet {
+		height: auto;
+	}
+
 	&__content {
 		margin: auto;
 		max-width: 900px;
@@ -100,6 +104,7 @@
 		.contact-info {
 			background: rgba(#000, 0.5);
 			display: flex;
+			flex-wrap: wrap;
 			padding: 1rem 0;
 			justify-content: center;
 			list-style: none;
@@ -111,9 +116,20 @@
 				text-align: center;
 				width: 30%;
 
+				@include tablet {
+					width: 100%;
+				}
+
 				&:nth-child(2) {
 					border-left: 1px solid $grey;
 					border-right: 1px solid $grey;
+
+					@include tablet {
+						border-top: 1px solid $grey;
+						border-bottom: 1px solid $grey;
+						border-left: none;
+						border-right: none;
+					}
 				}
 
 				.fa {

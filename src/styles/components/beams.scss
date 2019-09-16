@@ -9,11 +9,7 @@
 		background-size: cover;
 		display: flex;
 		flex-direction: column;
-		width: 50%;
-
-		@include tablet {
-			width: 100%;
-		}
+		flex-wrap: wrap;
 	}
 
 	&__title {
@@ -27,6 +23,7 @@
 
 		@include tablet {
 			font-size: 2rem;
+			width: 100%;
 		}
 
 		span {
@@ -43,6 +40,10 @@
 	&__text {
 		padding: 3rem 3rem 5rem;
 		width: calc(50% - 3rem);
+
+		@include tablet {
+			width: 100%;
+		}
 
 		h3 {
 			font-weight: $regular;

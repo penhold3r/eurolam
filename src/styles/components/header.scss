@@ -26,6 +26,10 @@
 			transition: all 0.3s;
 			width: 150px;
 
+			@include tablet {
+				width: 100px;
+			}
+
 			&__link {
 				display: block;
 				height: 100%;
@@ -88,6 +92,10 @@
 			transition: all 0.8s ease-in-out;
 			width: 100%;
 			z-index: 1;
+
+			@include tablet {
+				transition: all 0.4s ease-in-out;
+			}
 
 			.main-nav {
 				align-items: center;
@@ -203,6 +211,10 @@
 					opacity: 1;
 					transform: translateX(2.25rem);
 					animation: slide 0.4s ease-in-out 0.4s forwards;
+
+					@include tablet {
+						animation: slide 0.4s ease-in-out 0.2s forwards;
+					}
 
 					&__link {
 						opacity: 1;

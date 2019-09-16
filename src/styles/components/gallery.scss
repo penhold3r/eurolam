@@ -4,6 +4,10 @@
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	margin-bottom: 30px;
 
+	@include tablet {
+		grid-template-columns: 1fr 1fr;
+	}
+
 	.modal-image {
 		opacity: 0;
 		transition: opacity 0.5s;
@@ -74,6 +78,10 @@
 		opacity: 0.75;
 		position: relative;
 		transition: all 0.3s;
+
+		@include tablet {
+			height: 200px;
+		}
 
 		&:hover {
 			filter: grayscale(0);

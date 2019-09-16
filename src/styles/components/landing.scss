@@ -64,9 +64,17 @@
 			margin: auto auto 0;
 			width: 100%;
 
+			@include tablet {
+				font-size: 2.25rem;
+			}
+
 			.smaller {
 				font-weight: $regular;
 				font-size: 2rem;
+
+				@include tablet {
+					font-size: 1.5rem;
+				}
 			}
 		}
 		.slogan {
@@ -78,7 +86,12 @@
 			text-transform: uppercase;
 			width: 100%;
 
+			@include tablet {
+				font-size: 1rem;
+			}
+
 			span {
+				display: block;
 				border-left: 6px solid $primary-color;
 				padding: 0.5rem 1rem;
 			}

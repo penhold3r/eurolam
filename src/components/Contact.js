@@ -20,7 +20,7 @@ const Contact = () => {
 			style={{ backgroundImage: `url(${contactBg})` }}
 		>
 			<div className="contact__content">
-				<h2 className="contact-title text-color-white">Contacto</h2>
+				<h2 className="contact-title section-title text-color-white">Contacto</h2>
 				<form className="contact-form">
 					<div className="form-block name" ref={nameInput}>
 						<input

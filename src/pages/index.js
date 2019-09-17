@@ -7,6 +7,7 @@ import Services from '../components/Services'
 import Work from '../components/Work'
 import Beams from '../components/Beams'
 import Enviroment from '../components/Enviroment'
+import Certifications from '../components/Certifications'
 import Contact from '../components/Contact'
 
 const IndexPage = () => (
@@ -17,6 +18,7 @@ const IndexPage = () => (
 		<Services />
 		<Beams />
 		<Enviroment />
+		<Certifications />
 		<Contact />
 	</Layout>
 )

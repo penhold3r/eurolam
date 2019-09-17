@@ -1,7 +1,8 @@
 .beams {
-	position: relative;
 	display: flex;
 	flex-wrap: wrap;
+	min-height: 300px;
+	position: relative;
 
 	&__title,
 	&__text {
@@ -15,15 +16,13 @@
 	&__title {
 		background-color: $grey;
 		background-blend-mode: multiply;
-		font-size: 2.25rem;
 		font-weight: $light;
-		letter-spacing: 0.1rem;
-		text-transform: uppercase;
+		text-align: right;
 		width: calc(50% + 3rem);
 
 		@include tablet {
-			font-size: 2rem;
 			width: 100%;
+			text-align: center;
 		}
 
 		span {
@@ -45,17 +44,8 @@
 			width: 100%;
 		}
 
-		h3 {
-			font-weight: $regular;
-			letter-spacing: 0.1rem;
-			text-transform: uppercase;
-			margin: auto auto 1rem;
-			max-width: 400px;
-			width: 100%;
-		}
-
 		ul {
-			margin: 0 auto auto;
+			margin: auto;
 			max-width: 400px;
 			padding: 0 0 0 1rem;
 			list-style: none;

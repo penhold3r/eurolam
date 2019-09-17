@@ -7,9 +7,10 @@ const Enviroment = () => {
 	return (
 		<section className="enviroment">
 			<header className="enviroment__header">
-				<h2 className="env-title p-3 m-none">
+				<h2 className="env-title section-title p-3 m-none">
 					<span>
-						Eurolam y el cuidado del <strong>Medio Ambiente</strong>
+						Eurolam y el cuidado <br />
+						del <strong>Medio Ambiente</strong>
 					</span>
 				</h2>
 				<div className="env-hero bg-color-dark-grey">
@@ -21,18 +22,20 @@ const Enviroment = () => {
 					<img src={forestBg} alt="" />
 				</div>
 				<div className="env-text">
-					<h3 className="m-none">Vigas Laminadas</h3>
-					<ul className="m-none">
-						<li>
-							Excepcional resistencia al fuego. Bajo la acción del fuego se produce una
-							carbonización en la superficie de la madera que actúa como aislante, impidiendo
-							la propagación de la llama hacia su interior.
-						</li>
-						<li>Belleza en todas sus formas.</li>
-						<li>Propiedades aislantes.</li>
-						<li>Facilidad de montaje.</li>
-						<li>Mantenimiento y duración.</li>
-					</ul>
+					<div className="inner-text p-3">
+						<p>
+							<em>
+								La madera laminada es producida con un recurso renovable como la madera, a
+								diferencia de otros materiales como el acero o el hormigón.
+							</em>
+						</p>
+
+						<p>
+							Valerio Oliva obtiene su materia prima de bosques gestionados de manera
+							sostenible. De este modo hacemos un aporte al medio ambiente para lograr un
+							futuro sostenible.
+						</p>
+					</div>
 				</div>
 			</div>
 		</section>

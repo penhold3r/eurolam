@@ -17,10 +17,6 @@
 		width: 100%;
 
 		.contact-title {
-			font-size: 2.5rem;
-			text-transform: uppercase;
-			letter-spacing: 0.1rem;
-			font-weight: $regular;
 			text-align: center;
 		}
 
@@ -102,10 +98,9 @@
 		}
 
 		.contact-info {
-			background: rgba(#000, 0.5);
 			display: flex;
 			flex-wrap: wrap;
-			padding: 1rem 0;
+			padding: 0;
 			justify-content: center;
 			list-style: none;
 

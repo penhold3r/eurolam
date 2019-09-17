@@ -6,7 +6,7 @@ const Beams = () => {
 	return (
 		<section className="beams">
 			<h2
-				className="beams__title text-color-white p-3 m-none"
+				className="beams__title section-title text-color-white p-3 m-none"
 				style={{ backgroundImage: `url(${specsBg})` }}
 			>
 				<span>
@@ -14,7 +14,6 @@ const Beams = () => {
 				</span>
 			</h2>
 			<div className="beams__text">
-				<h3 className="text-color-primary m-none">Vigas Laminadas</h3>
 				<ul className="m-none">
 					<li>
 						Excepcional resistencia al fuego. Bajo la acción del fuego se produce una

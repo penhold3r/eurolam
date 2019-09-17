@@ -3,7 +3,7 @@ const globImporter = require('node-sass-glob-importer')
 module.exports = {
 	siteMetadata: {
 		title: `Eurolam`,
-		description: `Maderas.`,
+		description: `Maderas Laminadas para la construcción`,
 		author: `@eurolam`
 	},
 	plugins: [
@@ -33,7 +33,8 @@ module.exports = {
 				background_color: `#7f7771`,
 				theme_color: `#e81c1f`,
 				display: `standalone`,
-				icon: `src/images/favicon.png` // This path is relative to the root of the site.
+				icon: `src/images/app-icon.png`,
+				purpose: 'maskable any'
 			}
 		},
 		`gatsby-plugin-offline`

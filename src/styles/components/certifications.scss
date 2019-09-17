@@ -1,0 +1,35 @@
+.certifications {
+	position: relative;
+
+	.react-parallax-bgimage {
+		mix-blend-mode: soft-light;
+	}
+
+	.cert-content {
+		margin: 0 auto;
+		max-width: 800px;
+
+		.cert-title {
+			text-align: center;
+		}
+
+		p {
+			text-align: center;
+			margin: 0 0 1rem;
+
+			&.upper {
+				letter-spacing: 0.1rem;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.cert-badge {
+		margin: 2rem auto;
+		width: 100px;
+
+		img {
+			width: 100%;
+		}
+	}
+}

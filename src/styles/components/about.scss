@@ -15,15 +15,20 @@
 		background-blend-mode: multiply;
 		background-position: center;
 		background-attachment: fixed;
-		height: 100vh;
 		display: flex;
 
 		@include tablet {
-			height: auto;
+			//
 		}
 
 		.text-block {
 			margin: auto;
+
+			.logo-text {
+				display: block;
+				margin: 0 auto 2rem;
+				max-width: 200px;
+			}
 
 			p {
 				font-size: 1.25rem;
@@ -63,20 +68,15 @@
 	}
 
 	.caracteristics {
-		background: rgba($white, 0.5);
-		height: 100vh;
+		background: rgba($white, 0.25);
 
 		@include tablet {
-			height: auto;
+			//height: auto;
 		}
 
 		&__title {
-			font-size: 2.5rem;
-			font-weight: $regular;
-			letter-spacing: 0.1rem;
 			margin: 2rem 0 1rem;
 			text-align: center;
-			text-transform: uppercase;
 
 			@include tablet {
 				font-size: 2rem;
@@ -164,6 +164,11 @@
 			max-width: 800px;
 			text-align: center;
 			line-height: 1.5;
+
+			.upper {
+				letter-spacing: 0.1rem;
+				text-transform: uppercase;
+			}
 		}
 	}
 }

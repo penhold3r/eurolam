@@ -14,19 +14,23 @@
 
 	&__header {
 		position: relative;
+		height: 300px;
+
+		@include tablet {
+			background-color: $dark-grey;
+		}
 
 		.env-title {
 			display: flex;
-			font-size: 2.25rem;
 			font-weight: $light;
-			letter-spacing: 0.1rem;
-			text-transform: uppercase;
+			text-align: right;
 			width: calc(50% - 3rem);
 
 			@include tablet {
-				color: $light-grey !important;
+				color: $white !important;
 				font-size: 2rem;
 				position: relative;
+				text-align: center;
 				width: 100%;
 				z-index: 2;
 			}
@@ -42,11 +46,13 @@
 		}
 
 		.env-hero {
+			height: 100%;
 			width: calc(50% + 3rem);
 
 			@include tablet {
 				position: absolute;
 				height: 100%;
+				opacity: 0.6;
 				z-index: 1;
 				width: 100%;
 			}
@@ -62,6 +68,7 @@
 	}
 
 	&__content {
+		min-height: 300px;
 		position: relative;
 		top: -2rem;
 
@@ -70,6 +77,8 @@
 		}
 
 		.env-img {
+			display: flex;
+			height: 300px;
 			width: calc(50% + 3rem);
 
 			@include tablet {
@@ -103,39 +112,11 @@
 				z-index: 2;
 			}
 
-			h3 {
-				font-weight: $regular;
-				letter-spacing: 0.1rem;
-				text-transform: uppercase;
-				margin: auto auto 1rem;
-				max-width: 400px;
-				width: 100%;
+			.inner-text {
+				margin: auto;
 
 				@include tablet {
-					color: $light-grey;
-				}
-			}
-
-			ul {
-				margin: 0 auto auto;
-				max-width: 400px;
-				padding: 0 0 0 1rem;
-				list-style: none;
-				position: relative;
-				width: 100%;
-
-				@include tablet {
-					color: $light-grey;
-				}
-
-				&:before {
-					background: $primary-color;
-					content: '';
-					height: 2rem;
-					width: 6px;
-					position: absolute;
-					top: 0;
-					left: 0;
+					color: $white;
 				}
 			}
 		}

@@ -27,7 +27,7 @@ const Work = () => {
 
 	return (
 		<section className="work bg-color-grey py-2 px-1" id="obras">
-			<h2 className="work__title text-color-white">Nuestras Obras</h2>
+			<h2 className="work__title section-title text-color-white">Nuestras Obras</h2>
 			<Gallery data={gallery} />
 		</section>
 	)

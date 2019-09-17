@@ -13,7 +13,9 @@ import Footer from './Footer'
 import 'sanitize.css'
 import '../styles/index.scss'
 
-import favicon from '../images/favicon.ico'
+import opengraph from '../images/eurolam-og.png'
+import faviconICO from '../images/favicon.ico'
+import faviconPNG from '../images/favicon.png'
 
 library.add(fab, faHome, faEnvelope, faPhoneAlt)
 
@@ -39,29 +41,71 @@ const Layout = ({ title, children }) => (
 						meta={[
 							{
 								property: 'og:image',
-								content: 'bookmark'
+								content: opengraph
+							},
+							{
+								name: 'twitter:image',
+								content: opengraph
 							},
 							{
 								name: 'description',
 								content: site.siteMetadata.description
 							},
 							{
+								property: 'og:description',
+								content: site.siteMetadata.description
+							},
+							{
+								name: 'twitter:description',
+								content: site.siteMetadata.description
+							},
+							{
+								property: 'og:title',
+								content: pageTitle
+							},
+							{
+								name: 'twitter:title',
+								content: pageTitle
+							},
+							{
+								property: 'og:url',
+								content: 'https://valerio-oliva.com/'
+							},
+							{
+								name: 'twitter:site',
+								content: 'https://valerio-oliva.com/'
+							},
+							{
+								property: 'og:type',
+								content: 'Website'
+							},
+							{
+								name: 'twitter:card',
+								content: 'summary_large_image'
+							},
+							{
 								name: 'keywords',
-								content: 'oliva'
+								content: 'maderas, maderas laminadas, construcción, materiales'
 							}
 						]}
 						link={[
 							{
-								href: favicon,
+								href: faviconICO,
 								rel: 'shortcut icon',
 								type: 'image/x-icon'
-							}
-						]}
-						script={[
+							},
 							{
-								src: 'https://kit.fontawesome.com/54610dc2a8.jsx'
+								href: faviconPNG,
+								rel: 'shortcut icon',
+								type: 'image/png',
+								sizes: '32x32 192x192'
 							}
 						]}
+						// script={[
+						// 	{
+						// 		src: 'https://kit.fontawesome.com/54610dc2a8.jsx'
+						// 	}
+						// ]}
 					/>
 					<Header />
 					<main>{children}</main>

@@ -1,9 +1,11 @@
 .site-header {
 	background: linear-gradient(rgba($dark, 0.8), rgba($dark, 0));
 	height: 65px;
-	position: sticky;
+	left: 0;
+	position: fixed;
 	top: 0;
 	transition: all 0.3s;
+	width: 100%;
 	z-index: 99;
 
 	&.darken {

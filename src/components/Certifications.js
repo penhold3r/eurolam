@@ -15,19 +15,26 @@ const Certifications = () => {
 							Nuestro producto está realizado bajo estrictos controles de calidad y
 							seguridad. Este proceso está regulado por normas altamente calificadas y
 							específicas. La fábrica cuenta con un servicio de control de calidad interno,
-							equipado con un laboratorio homologado. Este control de calidad es supervisado
-							por diferentes organismos oficiales en función de los diferentes certificados
-							de calidad.
+							equipado con un laboratorio homologado.
 						</p>
-						<p className="red bg-primary p-1">
-							El otto graft instituto de alemania es el organismo que habilita y califica a
-							las fábricas de maderas laminadas en europa.
+						<p className="upper text-color-white">
+							<strong>
+								Este control de calidad es supervisado por diferentes organismos oficiales
+								en función de los diferentes certificados de calidad.
+							</strong>
 						</p>
-						<p className="text-color-white">
-							Técnicos de dicho Instituto visitaron nuestras instalaciones y su informe fue
-							que Valerio Oliva S.A.C.I.A. tiene la mejor organización como también dispone
-							del mejor equipamiento tecnológico. También existen los conocimientos
-							necesarios en lo que refiere a una producción cualitativa de vigas laminadas.
+						<p className="red upper bg-primary p-1">
+							El <strong>Otto Graft</strong> instituto de alemania es el organismo que
+							habilita y califica a las fábricas de maderas laminadas en europa.
+						</p>
+						<p className="short text-color-white">
+							<em>
+								Técnicos de dicho Instituto visitaron nuestras instalaciones y su informe
+								fue que <strong>Valerio Oliva S.A.C.I.A.</strong> tiene la mejor
+								organización como también dispone del mejor equipamiento tecnológico.
+								También existen los conocimientos necesarios en lo que refiere a una
+								producción cualitativa de vigas laminadas.
+							</em>
 						</p>
 					</div>
 					<div className="cert-badge">

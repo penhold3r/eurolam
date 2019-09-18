@@ -7,22 +7,23 @@ const Enviroment = () => {
 	return (
 		<section className="enviroment">
 			<header className="enviroment__header">
-				<h2 className="env-title section-title p-3 m-none">
+				<h2 className="env-title text-color-grey p-3 m-none">
 					<span>
 						Eurolam y el cuidado <br />
 						del <strong>Medio Ambiente</strong>
 					</span>
 				</h2>
 				<div className="env-hero bg-color-dark-grey">
-					<img src={beamsBg} />
+					<img src={beamsBg} alt="" />
 				</div>
 			</header>
 			<div className="enviroment__content">
-				<div className="env-img bg-color-dark-grey">
-					<img src={forestBg} alt="" />
-				</div>
+				<div
+					className="env-img bg-color-dark-grey"
+					style={{ backgroundImage: `url(${forestBg})` }}
+				></div>
 				<div className="env-text">
-					<div className="inner-text p-3">
+					<div className="inner-text">
 						<p>
 							<em>
 								La madera laminada es producida con un recurso renovable como la madera, a

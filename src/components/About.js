@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Parallax } from 'react-parallax'
+
+import VigasTable from './VigasTable'
 
 import bgAbout from '../images/eurolam-about_bg.jpg'
 import bgSpecs from '../images/eurolam-caracteristicas_bg.jpg'
@@ -11,7 +13,34 @@ import caracteristicas from '../images/caracteristicas.svg'
 import cortes from '../images/cortes.svg'
 import estructuras from '../images/estructuras.svg'
 
+import estructurasType from '../images/eurolam_tipos-de-estructura.svg'
+import cortesType from '../images/eurolam_tipos-de-corte.svg'
+
 const About = () => {
+	const [modalState, setModalState] = useState({
+		modalOpen: false,
+		modalContent: '',
+		modalTitle: ''
+	})
+
+	const openModal = (title, content) => {
+		const open = {
+			modalOpen: true,
+			modalContent: content,
+			modalTitle: title
+		}
+		setModalState(open)
+	}
+
+	const closeModal = () => {
+		const defModal = {
+			modalOpen: false,
+			modalContent: '',
+			modalTitle: ''
+		}
+		setModalState(defModal)
+	}
+
 	return (
 		<section className="about" id="nosotros">
 			<div
@@ -35,17 +64,16 @@ const About = () => {
 			</div>
 			<Parallax bgImage={bgSpecs} strength={400}>
 				<div className="caracteristics px-1 py-4">
-					<h3 className="caracteristics__title section-title">Caracteristicas</h3>
-					<h4 className="caracteristics__subtitle text-color-primary">
+					<h3 className="caracteristics__title section-title">
 						Diseño, Ingeniería y Fabricación
-					</h4>
+					</h3>
 					<p className="caracteristics__text">
 						La madera multilaminada está constituida por láminas de distintos largos,
 						seleccionados, de un espesor determinado que permite eliminar los defectos. Se
 						unen entre sí por el sistema de entalladuras múltiples, hasta alcanzar la longitud
 						de la pieza a construir.
 					</p>
-					<p className="caracteristics__text feat py-1 px-2">
+					<p className="caracteristics__text feat text-color-primary py-1 px-2">
 						<em>
 							Estas láminas son encoladas, obteniéndose un elemento con resistencia mecánica
 							superior a La misma madera que lo compone y de gran estabilidad dimensional.
@@ -54,21 +82,48 @@ const About = () => {
 				</div>
 			</Parallax>
 			<div className="cards px-2 py-3 mt-3">
+				<div className={`specs-modal p-2 ${modalState.modalOpen && 'open'}`}>
+					<div className="specs-content bg-color-white">
+						<header className="modal-header bg-color-white p-1">
+							<h3 className="text-color-primary m-none">
+								{modalState.modalTitle && modalState.modalTitle}
+							</h3>
+							<div className="close-modal text-color-primary" onClick={() => closeModal()}>
+								&times;
+							</div>
+						</header>
+						<div className="modal-content p-1">
+							{modalState.modalContent && modalState.modalContent}
+						</div>
+					</div>
+				</div>
+
 				<ul className="cards__grid p-none">
 					<li className="beams-card m-none p-h-1">
-						<div className="beams-card__icon bg-color-light-grey">
+						<div
+							className="beams-card__icon bg-color-light-grey"
+							onClick={() =>
+								openModal('Tipos de Estructuras', <img src={estructurasType} alt="" />)
+							}
+						>
 							<img src={estructuras} alt="[ estructuras ]" />
 						</div>
 						<h3 className="beams-card__title light text-color-primary">Estructuras</h3>
 					</li>
 					<li className="beams-card m-none p-h-1">
-						<div className="beams-card__icon bg-color-light-grey">
+						<div
+							className="beams-card__icon bg-color-light-grey"
+							onClick={() => openModal('Caracteristicas', <VigasTable />)}
+						>
 							<img src={caracteristicas} alt="[ caracteristicas ]" />
 						</div>
 						<h3 className="beams-card__title light text-color-primary">Caracteristicas</h3>
 					</li>
 					<li className="beams-card m-none p-h-1">
-						<div className="beams-card__icon bg-color-light-grey">
+						<div
+							className="beams-card__icon bg-color-light-grey"
+							onClick={() => openModal('Tipos de Cortes', <img src={cortesType} alt="" />)}
+						>
 							<img src={cortes} alt="[ cortes ]" />
 						</div>
 						<h3 className="beams-card__title light text-color-primary">Cortes</h3>

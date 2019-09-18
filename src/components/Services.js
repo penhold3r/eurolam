@@ -1,5 +1,7 @@
 import React from 'react'
 
+import wave from '../images/eurolam_logo-wave.svg'
+
 const Services = () => {
 	const toggleCard = e => {
 		const parent = e.currentTarget.parentElement
@@ -20,8 +22,8 @@ const Services = () => {
 						<h4 className="service-card__tagname text-color-primary m-none p-q-1">Diseño</h4>
 					</div>
 					<div className="service-card__text text-color-primary" onClick={e => toggleCard(e)}>
-						<div className="inner-card">
-							<div className="close-card">&times;</div>
+						<div className="inner-card bg-color-light-grey text-color-grey">
+							<div className="close-card text-color-primary">&times;</div>
 							<div className="card-content">
 								<p>
 									<em>
@@ -30,6 +32,9 @@ const Services = () => {
 										de la mejor manera la realización de los proyectos.
 									</em>
 								</p>
+							</div>
+							<div className="wave">
+								<img src={wave} alt="" />
 							</div>
 						</div>
 					</div>
@@ -42,8 +47,8 @@ const Services = () => {
 						</h4>
 					</div>
 					<div className="service-card__text text-color-primary" onClick={e => toggleCard(e)}>
-						<div className="inner-card">
-							<div className="close-card">&times;</div>
+						<div className="inner-card bg-color-light-grey text-color-grey">
+							<div className="close-card text-color-primary">&times;</div>
 							<div className="card-content">
 								<p>
 									<em>
@@ -58,6 +63,9 @@ const Services = () => {
 									</em>
 								</p>
 							</div>
+							<div className="wave">
+								<img src={wave} alt="" />
+							</div>
 						</div>
 					</div>
 				</li>
@@ -69,8 +77,8 @@ const Services = () => {
 						</h4>
 					</div>
 					<div className="service-card__text text-color-primary" onClick={e => toggleCard(e)}>
-						<div className="inner-card">
-							<div className="close-card">&times;</div>
+						<div className="inner-card bg-color-light-grey text-color-grey">
+							<div className="close-card text-color-primary">&times;</div>
 							<div className="card-content">
 								<p>
 									<em>
@@ -81,6 +89,9 @@ const Services = () => {
 										detalle.
 									</em>
 								</p>
+							</div>
+							<div className="wave">
+								<img src={wave} alt="" />
 							</div>
 						</div>
 					</div>

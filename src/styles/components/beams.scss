@@ -4,7 +4,7 @@
 	min-height: 300px;
 	position: relative;
 
-	&__title,
+	&__image,
 	&__text {
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -13,26 +13,13 @@
 		flex-wrap: wrap;
 	}
 
-	&__title {
+	&__image {
 		background-color: $grey;
-		background-blend-mode: multiply;
-		font-weight: $light;
-		text-align: right;
 		width: calc(50% + 3rem);
 
 		@include tablet {
+			height: 250px;
 			width: 100%;
-			text-align: center;
-		}
-
-		span {
-			margin: auto;
-			max-width: 400px;
-			width: 100%;
-
-			strong {
-				font-weight: $regular;
-			}
 		}
 	}
 
@@ -42,10 +29,20 @@
 
 		@include tablet {
 			width: 100%;
+			padding: 2rem;
+		}
+
+		h3 {
+			margin: auto 0 1rem;
+			font-weight: $regular;
+			font-size: 2rem;
+			letter-spacing: 0.1rem;
+			line-height: 1;
+			text-transform: uppercase;
 		}
 
 		ul {
-			margin: auto;
+			margin: 0 auto auto;
 			max-width: 400px;
 			padding: 0 0 0 1rem;
 			list-style: none;
@@ -60,6 +57,10 @@
 				position: absolute;
 				top: 0;
 				left: 0;
+			}
+
+			@include tablet {
+				max-width: 100%;
 			}
 		}
 	}

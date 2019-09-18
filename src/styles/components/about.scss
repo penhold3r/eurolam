@@ -12,7 +12,7 @@
 	&__content {
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-blend-mode: multiply;
+		background-blend-mode: overlay;
 		background-position: center;
 		background-attachment: fixed;
 		display: flex;
@@ -161,12 +161,12 @@
 
 		&__footnote {
 			margin: 0 auto 2rem;
-			max-width: 800px;
+			max-width: 900px;
 			text-align: center;
 			line-height: 1.5;
 
 			.upper {
-				letter-spacing: 0.1rem;
+				letter-spacing: 0.05rem;
 				text-transform: uppercase;
 			}
 		}

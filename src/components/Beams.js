@@ -5,15 +5,11 @@ import specsBg from '../images/eurolam-vigas_bg.jpg'
 const Beams = () => {
 	return (
 		<section className="beams">
-			<h2
-				className="beams__title section-title text-color-white p-3 m-none"
-				style={{ backgroundImage: `url(${specsBg})` }}
-			>
-				<span>
-					Ventajas de la <strong>Madera Laminada</strong>
-				</span>
-			</h2>
+			<div className="beams__image" style={{ backgroundImage: `url(${specsBg})` }}></div>
 			<div className="beams__text">
+				<h3 className="beams-title text-color-grey">
+					Ventajas de la <strong>Madera Laminada</strong>
+				</h3>
 				<ul className="m-none">
 					<li>
 						Excepcional resistencia al fuego. Bajo la acción del fuego se produce una

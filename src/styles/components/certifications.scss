@@ -1,25 +1,37 @@
 .certifications {
+	border-bottom: 1px solid $primary-color;
+	border-top: 1px solid $primary-color;
 	position: relative;
 
 	.react-parallax-bgimage {
 		mix-blend-mode: soft-light;
+		opacity: 0.7;
 	}
 
 	.cert-content {
 		margin: 0 auto;
-		max-width: 800px;
+		max-width: 1000px;
 
 		.cert-title {
 			text-align: center;
 		}
 
 		p {
+			font-weight: $light;
 			text-align: center;
-			margin: 0 0 1rem;
+			margin: 0 auto 1rem;
+
+			strong {
+				font-weight: $regular;
+			}
 
 			&.upper {
-				letter-spacing: 0.1rem;
+				letter-spacing: 0.05rem;
 				text-transform: uppercase;
+			}
+
+			&.short {
+				max-width: 750px;
 			}
 		}
 	}

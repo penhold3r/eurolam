@@ -67,7 +67,6 @@
 				transition: all 0.5s;
 
 				.inner-card {
-					background: $white;
 					box-shadow: $box-shadow;
 					display: flex;
 					height: 80%;
@@ -88,10 +87,31 @@
 						position: absolute;
 						right: 0;
 						top: 0;
+
+						&:hover {
+							opacity: 0.5;
+						}
 					}
 
 					.card-content {
 						margin: auto;
+						text-align: center;
+					}
+
+					.wave {
+						bottom: 0px;
+						height: 55px;
+						left: 0;
+						overflow: hidden;
+						position: absolute;
+						width: 100%;
+
+						img {
+							height: 100%;
+							object-fit: contain;
+							object-position: center 15px;
+							width: 100%;
+						}
 					}
 				}
 

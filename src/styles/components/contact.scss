@@ -3,7 +3,6 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
-	height: 100vh;
 	min-height: 500px;
 	position: relative;
 
@@ -22,7 +21,7 @@
 
 		.contact-form {
 			margin: 0 auto 1rem;
-			max-width: 400px;
+			max-width: 450px;
 			position: relative;
 			width: 100%;
 
@@ -112,6 +111,7 @@
 				width: 30%;
 
 				@include tablet {
+					padding: 1rem;
 					width: 100%;
 				}
 
@@ -135,21 +135,39 @@
 					width: 3rem;
 					border-radius: 50%;
 					padding: 0.75rem;
+					transition: background 0.3s;
 				}
 
 				p {
+					font-size: 0.9rem;
 					letter-spacing: 0.1rem;
 					font-weight: $light;
-					text-transform: uppercase;
+
+					strong {
+						font-weight: $regular;
+					}
 				}
 
 				a {
+					font-size: 0.9rem;
 					height: fit-content;
 					font-weight: $light;
 					text-decoration: none;
 
+					strong {
+						font-weight: $regular;
+					}
+
 					&:hover {
 						opacity: 0.7;
+					}
+
+					&.icon {
+						&:hover {
+							.fa {
+								background: $white;
+							}
+						}
 					}
 				}
 			}

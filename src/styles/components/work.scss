@@ -1,6 +1,9 @@
 .work {
 	&__title {
+		background-repeat: no-repeat;
+		background-size: 300px;
 		text-align: center;
+		background-position: center top;
 	}
 
 	&__lead {

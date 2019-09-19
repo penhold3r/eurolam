@@ -84,6 +84,15 @@ const Header = () => {
 							Servicios
 						</Link>
 						<Link
+							to="certificaciones"
+							duration={500}
+							smooth={true}
+							onClick={() => closeMenu()}
+							className="main-nav__link p-h-1 text-color-white"
+						>
+							Certificaciones
+						</Link>
+						<Link
 							to="contacto"
 							duration={500}
 							smooth={true}

@@ -11,6 +11,7 @@ import Header from './Header'
 import Footer from './Footer'
 
 import 'sanitize.css'
+import 'animate.css/animate.min.css'
 import '../styles/index.scss'
 
 import opengraph from '../images/eurolam-og.png'

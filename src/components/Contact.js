@@ -15,7 +15,7 @@ const Contact = () => {
 
 	return (
 		<section
-			className="contact bg-color-dark-grey"
+			className="contact bg-color-dark-grey py-3"
 			id="contacto"
 			style={{ backgroundImage: `url(${contactBg})` }}
 		>

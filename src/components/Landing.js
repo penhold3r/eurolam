@@ -33,7 +33,7 @@ const Landing = () => {
 			dirIndex = dirIndex < directions.length - 1 ? dirIndex + 1 : 0
 			setTransition(directions[dirIndex])
 		}, interval)
-	}, [interval])
+	})
 
 	//console.log(transition)
 

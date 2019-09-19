@@ -1,6 +1,7 @@
 .contact {
 	background-blend-mode: multiply;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 	background-size: cover;
 	display: flex;
 	min-height: 500px;
@@ -46,6 +47,7 @@
 
 					@include placeholder {
 						color: $light-grey;
+						opacity: 1;
 						text-transform: uppercase;
 						transition: all 0.3s;
 					}

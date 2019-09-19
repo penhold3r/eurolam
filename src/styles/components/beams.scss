@@ -32,35 +32,62 @@
 			padding: 2rem;
 		}
 
-		h3 {
-			margin: auto 0 1rem;
-			font-weight: $regular;
-			font-size: 2rem;
-			letter-spacing: 0.1rem;
-			line-height: 1;
-			text-transform: uppercase;
-		}
+		.inner-text {
+			margin: auto;
 
-		ul {
-			margin: 0 auto auto;
-			max-width: 400px;
-			padding: 0 0 0 1rem;
-			list-style: none;
-			position: relative;
-			width: 100%;
-
-			&:before {
-				background: $primary-color;
-				content: '';
-				height: 2rem;
-				width: 6px;
-				position: absolute;
-				top: 0;
-				left: 0;
+			h3 {
+				margin: 0 0 1rem;
+				font-weight: $regular;
+				font-size: 1.5rem;
+				letter-spacing: 0.1rem;
+				line-height: 1;
+				text-transform: uppercase;
 			}
 
-			@include tablet {
-				max-width: 100%;
+			.start {
+				margin: 0 auto 1rem;
+				max-width: 400px;
+				padding: 0 0 0 1rem;
+				position: relative;
+
+				&:before {
+					background: $primary-color;
+					content: '';
+					height: 2rem;
+					width: 6px;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+
+				@include tablet {
+					max-width: 100%;
+				}
+			}
+
+			ul {
+				margin: 0 auto;
+				max-width: 400px;
+				padding: 0;
+				list-style: none;
+				width: 100%;
+
+				@include tablet {
+					max-width: 100%;
+				}
+
+				li {
+					&:before {
+						content: '\2022';
+						color: $primary-color;
+						font-weight: bold;
+						display: inline-block;
+						width: 1rem;
+						line-height: 1rem;
+						vertical-align: bottom;
+						font-size: 1.5rem;
+					}
+				}
 			}
 		}
 	}

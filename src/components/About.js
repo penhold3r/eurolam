@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Parallax } from 'react-parallax'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 import VigasTable from './VigasTable'
 
@@ -47,20 +48,27 @@ const About = () => {
 				className="about__content bg-color-dark-grey px-1 py-5"
 				style={{ backgroundImage: `url(${bgAbout})` }}
 			>
-				<div className="text-block py-3">
-					<img src={logoText} alt="eurolam" className="logo-text" />
-					<p className="text-color-white">
-						<strong>Eurolam</strong> es una marca desarrollada por la empresa
-						<br />
-						<strong>Valerio Oliva S.A.C.I.A.</strong>
-						<br />
-						en Argentina para la comercialización de vigas laminadas.
-					</p>
-					<p className="text-color-primary enfasis my-2">
-						Hoy abrimos nuestro <strong>espacio comercial en Chile</strong> con proyección
-						exportadora a todo el mundo.
-					</p>
-				</div>
+				<ScrollAnimation
+					animateIn="fadeInUp"
+					delay={250}
+					animateOnce={true}
+					style={{ margin: 'auto' }}
+				>
+					<div className="text-block py-3">
+						<img src={logoText} alt="eurolam" className="logo-text" />
+						<p className="text-color-white">
+							<strong>Eurolam</strong> es una marca desarrollada por la empresa
+							<br />
+							<strong>Valerio Oliva S.A.C.I.A.</strong>
+							<br />
+							en Argentina para la comercialización de vigas laminadas.
+						</p>
+						<p className="text-color-primary enfasis my-2">
+							Hoy abrimos nuestro <strong>espacio comercial en Chile</strong> con proyección
+							exportadora a todo el mundo.
+						</p>
+					</div>
+				</ScrollAnimation>
 			</div>
 			<Parallax bgImage={bgSpecs} strength={400}>
 				<div className="caracteristics px-1 py-4">
@@ -73,12 +81,15 @@ const About = () => {
 						unen entre sí por el sistema de entalladuras múltiples, hasta alcanzar la longitud
 						de la pieza a construir.
 					</p>
-					<p className="caracteristics__text feat text-color-primary py-1 px-2">
-						<em>
-							Estas láminas son encoladas, obteniéndose un elemento con resistencia mecánica
-							superior a La misma madera que lo compone y de gran estabilidad dimensional.
-						</em>
-					</p>
+					<ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={250}>
+						<p className="caracteristics__text feat text-color-primary py-1 px-2">
+							<em>
+								Estas láminas son encoladas, obteniéndose un elemento con resistencia
+								mecánica superior a La misma madera que lo compone y de gran estabilidad
+								dimensional.
+							</em>
+						</p>
+					</ScrollAnimation>
 				</div>
 			</Parallax>
 			<div className="cards px-2 py-3 mt-3">
@@ -100,32 +111,40 @@ const About = () => {
 
 				<ul className="cards__grid p-none">
 					<li className="beams-card m-none p-h-1">
-						<div
-							className="beams-card__icon bg-color-light-grey"
-							onClick={() =>
-								openModal('Tipos de Estructuras', <img src={estructurasType} alt="" />)
-							}
-						>
-							<img src={estructuras} alt="[ estructuras ]" />
-						</div>
+						<ScrollAnimation animateIn="zoomIn" animateOnce={true} delay={250}>
+							<div
+								className="beams-card__icon bg-color-light-grey"
+								onClick={() =>
+									openModal('Tipos de Estructuras', <img src={estructurasType} alt="" />)
+								}
+							>
+								<img src={estructuras} alt="[ estructuras ]" />
+							</div>
+						</ScrollAnimation>
 						<h3 className="beams-card__title light text-color-primary">Estructuras</h3>
 					</li>
 					<li className="beams-card m-none p-h-1">
-						<div
-							className="beams-card__icon bg-color-light-grey"
-							onClick={() => openModal('Caracteristicas', <VigasTable />)}
-						>
-							<img src={caracteristicas} alt="[ caracteristicas ]" />
-						</div>
+						<ScrollAnimation animateIn="zoomIn" animateOnce={true} delay={250}>
+							<div
+								className="beams-card__icon bg-color-light-grey"
+								onClick={() => openModal('Caracteristicas', <VigasTable />)}
+							>
+								<img src={caracteristicas} alt="[ caracteristicas ]" />
+							</div>
+						</ScrollAnimation>
 						<h3 className="beams-card__title light text-color-primary">Caracteristicas</h3>
 					</li>
 					<li className="beams-card m-none p-h-1">
-						<div
-							className="beams-card__icon bg-color-light-grey"
-							onClick={() => openModal('Tipos de Cortes', <img src={cortesType} alt="" />)}
-						>
-							<img src={cortes} alt="[ cortes ]" />
-						</div>
+						<ScrollAnimation animateIn="zoomIn" animateOnce={true} delay={250}>
+							<div
+								className="beams-card__icon bg-color-light-grey"
+								onClick={() =>
+									openModal('Tipos de Cortes', <img src={cortesType} alt="" />)
+								}
+							>
+								<img src={cortes} alt="[ cortes ]" />
+							</div>
+						</ScrollAnimation>
 						<h3 className="beams-card__title light text-color-primary">Cortes</h3>
 					</li>
 				</ul>

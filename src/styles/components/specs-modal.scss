@@ -67,7 +67,7 @@
 				width: 100%;
 
 				.specs-table {
-					background: lighten($accent-color, 45);
+					background: rgba($grey, 0.4);
 					border: 1px solid #fff;
 					text-align: center;
 					width: 100%;
@@ -109,7 +109,7 @@
 					tbody {
 						tr {
 							&:nth-child(odd) {
-								background: rgba($accent-color, 0.2);
+								background: $light-grey;
 							}
 						}
 					}

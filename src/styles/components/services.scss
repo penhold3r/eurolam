@@ -73,7 +73,7 @@
 					margin: auto;
 					max-width: 450px;
 					opacity: 0;
-					padding: 3rem 2rem 2rem;
+					padding: 3rem 3rem 2rem;
 					position: relative;
 					transition: all 0.5s;
 					transform: translateY(20px);
@@ -94,8 +94,10 @@
 					}
 
 					.card-content {
+						font-weight: $light;
 						margin: auto;
 						text-align: center;
+						font-size: 0.9rem;
 					}
 
 					.wave {

@@ -20,7 +20,6 @@ const Gallery = ({ data }) => {
 							currentImage: publicURL,
 							modalOpen: true
 						}
-						console.log('click!')
 						setModalState(open)
 					}}
 				>

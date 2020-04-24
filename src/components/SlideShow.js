@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
@@ -44,7 +44,8 @@ const SlideShow = ({ images, slideHeight, slideWidth = '100%', itemWidth, speed 
 			.replace(/[^a-z]+/g, '')
 			.substr(2, 10)
 
-	injectStyle(`
+	useEffect(() => {
+		injectStyle(`
       @keyframes scroll {
          0% {
             transform: translateX(0);
@@ -54,6 +55,8 @@ const SlideShow = ({ images, slideHeight, slideWidth = '100%', itemWidth, speed 
          }
       }
    `)
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
 
 	return (
 		<div className='slide-show' style={styles.slideShow}>

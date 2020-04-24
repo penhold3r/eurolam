@@ -96,6 +96,41 @@
 					color: $primary-color;
 				}
 			}
+
+			.output-msg {
+				padding: 1rem;
+				display: flex;
+				position: absolute;
+				background: rgba($grey, 0.9);
+				top: 3rem;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				opacity: 0;
+				pointer-events: none;
+				transition: all 0.4s;
+
+				p {
+					margin: auto;
+					font-weight: $regular;
+					color: $white;
+					text-transform: uppercase;
+
+					&.msg-ok {
+						color: aquamarine !important;
+					}
+
+					&.msg-error {
+						color: tomato !important;
+					}
+				}
+
+				&.visible {
+					top: 0;
+					opacity: 1;
+					pointer-events: all;
+				}
+			}
 		}
 
 		.contact-info {

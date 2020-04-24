@@ -22,6 +22,15 @@ body {
 			}
 		}
 	}
+
+	.human {
+		background: transparent;
+		border: none;
+		height: 0;
+		pointer-events: none;
+		visibility: hidden;
+		width: 0;
+	}
 }
 
 @import './components/*.scss';

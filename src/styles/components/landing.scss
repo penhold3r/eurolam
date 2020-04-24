@@ -117,7 +117,7 @@
 		}
 
 		.wheely {
-			animation: scroll 1.5s ease-in-out infinite;
+			animation: scrolly 1.5s ease-in-out infinite;
 			background: $white;
 			border-radius: 2px;
 			height: 12px;
@@ -127,9 +127,9 @@
 	}
 }
 
-@keyframes scroll {
+@keyframes scrolly {
 	0% {
-		margin: 8px auto auto;
+		margin-top: 8px auto auto;
 	}
 	50% {
 		margin: 15px auto auto;

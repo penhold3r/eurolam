@@ -26,102 +26,97 @@ const Header = () => {
 
 	return (
 		<header className={scrollHeader ? 'site-header px-1 darken' : 'site-header px-1'}>
-			<div className="site-header__inner">
-				<h1 className="main-logo m-none py-h-1">
+			<div className='site-header__inner'>
+				<h1 className='main-logo m-none py-h-1'>
 					<Link
-						to="inicio"
+						to='inicio'
 						duration={500}
 						smooth={true}
-						className="main-logo__link text-color-primary"
-					>
-						<img src={logo} alt="Eurolam" />
+						className='main-logo__link text-color-primary'>
+						<img src={logo} alt='Eurolam' />
 					</Link>
 				</h1>
 				<div
 					className={hambState ? 'hamb-menu crossed' : 'hamb-menu'}
 					onClick={() => closeMenu()}
-				>
-					<div className="hamb-menu__bar" />
-					<div className="hamb-menu__bar" />
-					<div className="hamb-menu__bar" />
+					onKeyPress={() => closeMenu()}
+					role='button'
+					tabIndex='0'>
+					<div className='hamb-menu__bar' />
+					<div className='hamb-menu__bar' />
+					<div className='hamb-menu__bar' />
 				</div>
 				<div className={menuState ? 'side-menu open' : 'side-menu'}>
-					<nav className="main-nav">
+					<nav className='main-nav'>
 						<Link
-							to="inicio"
+							to='inicio'
 							duration={500}
 							smooth={true}
 							onClick={() => closeMenu()}
-							className="main-nav__link p-h-1 text-color-white"
-						>
+							className='main-nav__link p-h-1 text-color-white'>
 							Inicio
 						</Link>
 						<Link
-							to="nosotros"
+							to='nosotros'
 							duration={500}
 							smooth={true}
 							onClick={() => closeMenu()}
-							className="main-nav__link p-h-1 text-color-white"
-						>
+							className='main-nav__link p-h-1 text-color-white'>
 							Nosotros
 						</Link>
 						<Link
-							to="obras"
+							to='obras'
 							duration={500}
 							smooth={true}
 							onClick={() => closeMenu()}
-							className="main-nav__link p-h-1 text-color-white"
-						>
+							className='main-nav__link p-h-1 text-color-white'>
 							Obras
 						</Link>
 						<Link
-							to="servicios"
+							to='servicios'
 							duration={500}
 							smooth={true}
 							onClick={() => closeMenu()}
-							className="main-nav__link p-h-1 text-color-white"
-						>
+							className='main-nav__link p-h-1 text-color-white'>
 							Servicios
 						</Link>
 						<Link
-							to="certificaciones"
+							to='certificaciones'
 							duration={500}
 							smooth={true}
 							onClick={() => closeMenu()}
-							className="main-nav__link p-h-1 text-color-white"
-						>
+							className='main-nav__link p-h-1 text-color-white'>
 							Certificaciones
 						</Link>
 						<Link
-							to="contacto"
+							to='contacto'
 							duration={500}
 							smooth={true}
 							onClick={() => closeMenu()}
-							className="main-nav__link p-h-1 text-color-white"
-						>
+							className='main-nav__link p-h-1 text-color-white'>
 							Contacto
 						</Link>
 					</nav>
-					<div className="nav-foot p-1">
-						<Link to="mailto:info@eurolam.cl" className="nav-foot__mail m-1">
+					<div className='nav-foot p-1'>
+						<Link to='mailto:info@eurolam.cl' className='nav-foot__mail my-1'>
 							info@eurolam.cl
 						</Link>
-						<div className="nav-foot__social m-1">
-							<Link to="https://facebook.com" className="mx-q-1" title="Facebook">
+						<div className='nav-foot__social m-1'>
+							<Link to='https://facebook.com' className='mx-q-1' title='Facebook'>
 								{/* <i class="fab fa-facebook-f" /> */}
-								<FontAwesomeIcon className="fa" icon={['fab', 'facebook-f']} />
+								<FontAwesomeIcon className='fa' icon={['fab', 'facebook-f']} />
 							</Link>
-							<Link to="https://instagram.com" className="mx-q-1" title="Instagram">
+							<Link to='https://instagram.com' className='mx-q-1' title='Instagram'>
 								{/* <i class="fab fa-instagram" /> */}
-								<FontAwesomeIcon className="fa" icon={['fab', 'instagram']} />
+								<FontAwesomeIcon className='fa' icon={['fab', 'instagram']} />
 							</Link>
-							<Link to="https://twitter.com" className="mx-q-1" title="Twitter">
+							<Link to='https://twitter.com' className='mx-q-1' title='Twitter'>
 								{/* <i class="fab fa-twitter" /> */}
-								<FontAwesomeIcon className="fa" icon={['fab', 'twitter']} />
+								<FontAwesomeIcon className='fa' icon={['fab', 'twitter']} />
 							</Link>
-							<Link to="https://skype.com" className="mx-q-1" title="Skype">
+							<Link to='https://skype.com' className='mx-q-1' title='Skype'>
 								{/* <i class="fab fa-skype" /> */}
-								<FontAwesomeIcon className="fa" icon={['fab', 'skype']} />
+								<FontAwesomeIcon className='fa' icon={['fab', 'skype']} />
 							</Link>
 						</div>
 					</div>

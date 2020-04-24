@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import Link from './Link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import submitForm from '../utils/submit-form'
 
 import contactBg from '../images/eurolam-contact_bg.jpg'
 
@@ -8,6 +9,35 @@ const Contact = () => {
 	const nameInput = useRef(null)
 	const emailInput = useRef(null)
 	const msgInput = useRef(null)
+
+	const contactMsgs = () => {
+		const successMsg = '¡Mensaje enviado!'
+		const errorMsg = 'Hubo un error, intente más tarde.'
+		const sending = 'Enviando...'
+
+		return { successMsg, errorMsg, sending }
+	}
+
+	const handleSubmit = e => {
+		const submitSettings = {
+			dest: 'http://eurolam.cl/contact-form/index.php',
+			fields: '.form-input',
+			successMsg: contactMsgs().successMsg,
+			errorMsg: contactMsgs().errorMsg,
+			sending: contactMsgs().sending,
+			closeMsg: true,
+			urlencoded: true,
+			reciever: 'penhold3r@gmail.com'
+		}
+
+		const form = document.querySelector('.contact-form')
+
+		const humanForm = document.querySelector('.human')
+		const human = humanForm.value === ''
+
+		e.preventDefault()
+		human && submitForm(form, submitSettings)
+	}
 
 	const handleFocus = (tgt, focus = false) => {
 		focus ? tgt.current.classList.add('expanded') : tgt.current.classList.remove('expanded')
@@ -21,7 +51,7 @@ const Contact = () => {
 		>
 			<div className="contact__content">
 				<h2 className="contact-title section-title text-color-white">Contacto</h2>
-				<form className="contact-form p-1">
+				<form className="contact-form p-1" onSubmit={e => handleSubmit(e)}>
 					<div className="form-block name" ref={nameInput}>
 						<input
 							type="text"
@@ -51,6 +81,7 @@ const Contact = () => {
 							placeholder="Mensaje"
 						/>
 					</div>
+					<input type="text" className="human" tabIndex="-1" />
 					<input
 						className="form-submit bg-color-primary text-color-white py-h-1 px-1"
 						type="submit"

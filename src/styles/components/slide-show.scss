@@ -1,0 +1,15 @@
+.slide-show {
+	background: $white;
+
+	&__track {
+		position: relative;
+	}
+
+	&__image {
+		padding: 1rem;
+
+		.g-image {
+			height: 100%;
+		}
+	}
+}

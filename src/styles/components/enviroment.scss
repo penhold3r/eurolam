@@ -1,147 +1,74 @@
 .enviroment {
+	display: flex;
+	flex-wrap: wrap;
 	position: relative;
-	top: -2rem;
+	min-height: 300px;
 
-	@include tablet {
-		top: 0;
-	}
-
-	&__header,
-	&__content {
+	&__text {
 		display: flex;
-		flex-wrap: wrap;
-	}
-
-	&__header {
-		position: relative;
-		height: 300px;
+		flex-direction: column;
+		padding: 5rem 3rem 3rem;
+		width: calc(50% - 3rem);
 
 		@include tablet {
-			background-color: $dark-grey;
+			background: rgba($black, 0.5);
+			padding: 2rem;
+			width: 100%;
+			position: relative;
+			z-index: 2;
 		}
 
-		.env-title {
-			display: flex;
-			font-weight: $regular;
-			font-size: 2rem;
-			letter-spacing: 0.1rem;
-			line-height: 1;
-			text-align: right;
-			text-transform: uppercase;
-			width: calc(50% - 3rem);
+		.inner-text {
+			margin: auto;
+			padding: 0 0 0 1rem;
+			position: relative;
 
 			@include tablet {
-				color: $white !important;
+				color: $white;
+			}
+
+			h3 {
+				margin: 0 0 1rem;
+				font-weight: $regular;
 				font-size: 1.5rem;
-				position: relative;
-				text-align: center;
-				width: 100%;
-				z-index: 2;
+				letter-spacing: 0.1rem;
+				line-height: 1;
+				text-transform: uppercase;
 			}
 
-			img {
-				height: 100%;
-				width: 100%;
-				object-fit: cover;
-			}
-		}
-
-		.env-hero {
-			height: 100%;
-			width: calc(50% + 3rem);
-
-			@include tablet {
-				position: absolute;
-				height: 100%;
-				opacity: 0.6;
-				z-index: 1;
-				width: 100%;
-			}
-
-			img {
-				display: block;
-				height: 100%;
-				object-fit: cover;
-				opacity: 0.8;
-				width: 100%;
-			}
-		}
-	}
-
-	&__content {
-		min-height: 300px;
-		position: relative;
-		top: -2rem;
-
-		@include tablet {
-			top: 0;
-		}
-
-		.env-img {
-			background-repeat: no-repeat;
-			background-size: cover;
-			width: calc(50% + 3rem);
-
-			@include tablet {
-				height: 100%;
-				mix-blend-mode: multiply;
-				width: 100%;
-				position: absolute;
-				z-index: 1;
-			}
-		}
-
-		.env-text {
-			display: flex;
-			flex-direction: column;
-			padding: 5rem 3rem 3rem;
-			width: calc(50% - 3rem);
-
-			@include tablet {
-				padding: 2rem;
-				width: 100%;
-				position: relative;
-				z-index: 2;
-			}
-
-			.inner-text {
-				margin: auto;
+			p {
+				margin: 0 auto 1rem;
+				max-width: 400px;
 				padding: 0 0 0 1rem;
-				position: relative;
 
-				@include tablet {
-					color: $white;
-				}
+				&.start {
+					position: relative;
 
-				h3 {
-					margin: 0 0 1rem;
-					font-weight: $regular;
-					font-size: 1.5rem;
-					letter-spacing: 0.1rem;
-					line-height: 1;
-					text-transform: uppercase;
-				}
-
-				p {
-					margin: 0 auto 1rem;
-					max-width: 400px;
-					padding: 0 0 0 1rem;
-
-					&.start {
-						position: relative;
-
-						&:before {
-							background: $primary-color;
-							content: '';
-							height: 2rem;
-							width: 6px;
-							position: absolute;
-							top: 0;
-							left: 0;
-						}
+					&:before {
+						background: $primary-color;
+						content: '';
+						height: 2rem;
+						width: 6px;
+						position: absolute;
+						top: 0;
+						left: 0;
 					}
 				}
 			}
+		}
+	}
+
+	&__image {
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: calc(50% + 3rem);
+
+		@include tablet {
+			height: 100%;
+			mix-blend-mode: multiply;
+			width: 100%;
+			position: absolute;
+			z-index: 1;
 		}
 	}
 }
